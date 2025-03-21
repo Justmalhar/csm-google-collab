@@ -4,6 +4,10 @@
 
 > **Text-to-Speech Demo using Sesame's CSM-1B Model, Gradio UI, and HuggingFace Hub**
 
+
+![Demo](demo.png)
+
+
 ---
 
 ## 📌 Overview
