@@ -99,6 +99,7 @@ gr.Interface(
 - If you encounter `Model.__init__() missing required argument: 'config'`, verify model loading code inside `generator.py`.
 
 ---
+-For a deployable version of this project, see (DEPLOYMENT.md).
 
 ## 🧬 License
 
