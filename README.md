@@ -17,7 +17,7 @@ This notebook demonstrates how to set up and run **Sesame's CSM-1B** Text-to-Spe
 - 🔊 Input: Text  
 - 🎙️ Output: Realistic speech audio via pretrained TTS model  
 - 🤖 Model: [`sesame/csm-1b`](https://www.google.com/search?q=site%3Ahuggingface.co+sesame%2Fcsm-1b)
-
+- Demo link: https://huggingface.co/spaces/pallavi1428/seacsm
 ---
 
 ## 🚀 Quick Start
@@ -99,6 +99,7 @@ gr.Interface(
 - If you encounter `Model.__init__() missing required argument: 'config'`, verify model loading code inside `generator.py`.
 
 ---
+-For a deployable version of this project, see (DEPLOYMENT.md).
 
 ## 🧬 License
 
