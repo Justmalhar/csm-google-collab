@@ -14,28 +14,63 @@
 
 This notebook demonstrates how to set up and run **Sesame's CSM-1B** Text-to-Speech model on **Google Colab** using Gradio for a browser-based UI.
 
-- 🔊 Input: Text  
-- 🎙️ Output: Realistic speech audio via pretrained TTS model  
-- 🤖 Model: [`sesame/csm-1b`](https://www.google.com/search?q=site%3Ahuggingface.co+sesame%2Fcsm-1b)
-- Demo link: https://huggingface.co/spaces/pallavi1428/seacsm
+- 🔊 Text input → 🎧 audio output
+- 🖥️ Simple Gradio interface
+- 🧪 Experiment-ready Google Colab notebook
+- 🌐 Deployed Hugging Face Space (no setup needed)
 ---
 
 ## 🚀 Quick Start
 
-### 🔗 Run in Google Colab  
-Click the badge above to launch the notebook directly in Google Colab.
+- ✅ Live Demo: [Hugging Face Space](https://huggingface.co/spaces/pallavi1428/seacsm)
 
-### 🧩 Steps to Execute
-
-1. **Install Gradio and dependencies**
-2. **Clone the CSM repo** and install additional Python libraries via `requirements.txt`
-3. **Authenticate** with HuggingFace using `notebook_login()`
-4. **Load the model** using the helper from `generator.py`
-5. **Launch Gradio** with either:
-   - ✅ Simple `gr.Interface`
-   - 💡 Full-featured `gr.Blocks` app
+- ⚡ Run in Colab: [Sesame_AI_CSM_Notebook.ipynb](https://colab.research.google.com/github/Justmalhar/csm-google-collab/blob/main/Sesame_AI_CSM_Notebook.ipynb)
 
 ---
+
+## 🧩 Features
+
+- 🤖 Model: [`sesame/csm-1b`](https://huggingface.co/sesame/csm-1b)
+- 🎙️ Output: Speech via `generator.generate()`
+- 🧰 Dependencies: `gradio`, `torch`, `transformers`, `huggingface_hub`, `moshi`, `silentcipher`, etc.
+- 🧑‍💻 Author: [@justmalhar](https://github.com/justmalhar)
+
+---
+
+## 🌍 Deployment (Hugging Face)
+
+A lightweight deployment is available here:  
+🔗 https://huggingface.co/spaces/pallavi1428/seacsm
+
+### Deployment Details
+
+- `app.py`: Gradio app logic  
+- `requirements.txt`: Minimal dependencies  
+- 📱 Mobile-friendly + CPU-compatible
+
+---
+
+## 🧩 How It Works
+
+1. **Install Gradio + dependencies**
+2. **Clone the Sesame CSM repo**
+3. **Authenticate** with Hugging Face using `notebook_login()`
+4. **Load the model** with `generator.generate()`
+5. **Launch Gradio UI** (choose from basic or advanced interface)
+
+---
+## 🖼️ UI Modes
+
+### Simple Interface
+
+```python
+gr.Interface(
+    fn=gradio_interface,
+    inputs=[gr.Textbox(...), gr.Slider(...)],
+    outputs=gr.Audio(...),
+    title="Sesame CSM-1B Text-to-Speech"
+).launch(share=True)
+```
 
 ## 🛠️ Requirements
 
@@ -53,27 +88,34 @@ Main libraries:
 - `silentcipher` (from GitHub)
 
 ---
+🌍 Deployment on Hugging Face
+A ready-to-use deployment is hosted on Hugging Face Spaces:
 
-## 🧪 Model Source
+👉 https://huggingface.co/spaces/pallavi1428/seacsm
 
-- **Model**: [sesame/csm-1b](https://www.google.com/search?q=site%3Ahuggingface.co+sesame%2Fcsm-1b)
-- **Repository**: https://github.com/SesameAILabs/csm
-- **Audio Generation**: `generator.generate()` from cloned repo
+📂 Files Included
+app.py: Gradio application script
+
+requirements.txt: Dependencies for deployment
+
+✅ Deployment Features
+Identical functionality to the Colab notebook
+
+No installation needed – runs directly in the browser
+
+Mobile-friendly UI
+
+CPU-compatible for wider accessibility
+
+🧬 Model Source
+Model: sesame/csm-1b
+
+Original Repo: github.com/SesameAILabs/csm
+
+Audio Generation Code: generator.generate() from the repo
+
 
 ---
-
-## 🖼️ UI Modes
-
-### Simple Interface
-
-```python
-gr.Interface(
-    fn=gradio_interface,
-    inputs=[gr.Textbox(...), gr.Slider(...)],
-    outputs=gr.Audio(...),
-    title="Sesame CSM-1B Text-to-Speech"
-).launch(share=True)
-```
 
 ### Advanced Blocks UI
 
