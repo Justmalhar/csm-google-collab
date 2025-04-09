@@ -11,138 +11,80 @@
 ---
 
 ## 📌 Overview
+This repository features a simple setup to convert text into speech using **Sesame's CSM-1B**, powered by Gradio and hosted on Hugging Face, featuring both an interactive notebook and a live demo space.
 
-This notebook demonstrates how to set up and run **Sesame's CSM-1B** Text-to-Speech model on **Google Colab** using Gradio for a browser-based UI.
-
-- 🔊 Text input → 🎧 audio output
-- 🖥️ Simple Gradio interface
-- 🧪 Experiment-ready Google Colab notebook
-- 🌐 Deployed Hugging Face Space (no setup needed)
----
-
-## 🚀 Quick Start
+## 🚀 Quick Access
 
 - ✅ Live Demo: [Hugging Face Space](https://huggingface.co/spaces/pallavi1428/seacsm)
 
-- ⚡ Run in Colab: [Sesame_AI_CSM_Notebook.ipynb](https://colab.research.google.com/github/Justmalhar/csm-google-collab/blob/main/Sesame_AI_CSM_Notebook.ipynb)
+- ⚡ Colab Notebook: [Sesame_AI_CSM_Notebook.ipynb](https://colab.research.google.com/github/Justmalhar/csm-google-collab/blob/main/Sesame_AI_CSM_Notebook.ipynb)
 
 ---
 
 ## 🧩 Features
 
-- 🤖 Model: [`sesame/csm-1b`](https://huggingface.co/sesame/csm-1b)
-- 🎙️ Output: Speech via `generator.generate()`
-- 🧰 Dependencies: `gradio`, `torch`, `transformers`, `huggingface_hub`, `moshi`, `silentcipher`, etc.
-- 🧑‍💻 Author: [@justmalhar](https://github.com/justmalhar)
+- 🤖 Model: [`sesame/csm-1b`](https://huggingface.co/sesame/csm-1b) 
+- 🔊 Input: Any custom text or textfile 
+- 🎙️ Output: Audio with playback controls via `generator.generate()`
+- 🌐 Deployment: Gradio UI with Hugging Face Spaces
+- 💻 Notebook: Colab-ready with full setup included
 
 ---
 
-## 🌍 Deployment (Hugging Face)
+## 🛠️ Installation (Notebook Setup)
 
+1. Clone this repo and install requirements:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Authenticate with Hugging Face:
+
+   ```python
+   from huggingface_hub import notebook_login
+   notebook_login()
+   ```
+
+3. Load the model from the Sesame CSM repo.
+
+4. Launch Gradio interface (simple or advanced mode).
+
+---
+
+## 🌍 Deployment on Hugging Face
 A lightweight deployment is available here:  
 🔗 https://huggingface.co/spaces/pallavi1428/seacsm
 
 ### Deployment Details
+- `app.py`: Gradio application script
+- `requirements.txt`: Dependencies for deployment
 
-- `app.py`: Gradio app logic  
-- `requirements.txt`: Minimal dependencies  
-- 📱 Mobile-friendly + CPU-compatible
-
----
-
-## 🧩 How It Works
-
-1. **Install Gradio + dependencies**
-2. **Clone the Sesame CSM repo**
-3. **Authenticate** with Hugging Face using `notebook_login()`
-4. **Load the model** with `generator.generate()`
-5. **Launch Gradio UI** (choose from basic or advanced interface)
-
----
-## 🖼️ UI Modes
-
-### Simple Interface
-
-```python
-gr.Interface(
-    fn=gradio_interface,
-    inputs=[gr.Textbox(...), gr.Slider(...)],
-    outputs=gr.Audio(...),
-    title="Sesame CSM-1B Text-to-Speech"
-).launch(share=True)
-```
-
-## 🛠️ Requirements
-
-> All dependencies are pre-installed in the notebook via `pip install`
-
-Main libraries:
-
-- `gradio`
-- `torch`, `torchaudio`
-- `transformers`
-- `huggingface_hub`
-- `moshi`
-- `torchtune`
-- `torchao`
-- `silentcipher` (from GitHub)
-
----
-🌍 Deployment on Hugging Face
-A ready-to-use deployment is hosted on Hugging Face Spaces:
-
-👉 https://huggingface.co/spaces/pallavi1428/seacsm
-
-📂 Files Included
-app.py: Gradio application script
-
-requirements.txt: Dependencies for deployment
-
-✅ Deployment Features
+### ✅ Deployment Features
 Identical functionality to the Colab notebook
-
 No installation needed – runs directly in the browser
-
 Mobile-friendly UI
-
 CPU-compatible for wider accessibility
 
-🧬 Model Source
-Model: sesame/csm-1b
+---
 
-Original Repo: github.com/SesameAILabs/csm
+## 🧬 Model Info
 
-Audio Generation Code: generator.generate() from the repo
-
+- Model: [sesame/csm-1b](https://huggingface.co/sesame/csm-1b)  
+- Audio generation via `generator.generate()`  
+- Original repository: [SesameAILabs/csm](https://github.com/SesameAILabs/csm)
 
 ---
 
-### Advanced Blocks UI
-
-- 🔤 Text Input + File Upload
-- 🎚️ Speaker Selector
-- 🎛️ Audio Controls (play, pause, stop)
-- 🔉 Volume Slider
-- 🔁 Event Binding via `.click()`
+## 🧬 License  
+- **Notebook**: MIT  
+- **Model**: [Sesame’s terms](https://huggingface.co/sesame/csm-1b)  
 
 ---
 
 ## 🧑‍💻 Author
-
 - 👤 Malhar Ujawane
 - 🐦 [Twitter](https://x.com/justmalhar)
-- 💻 [GitHub](https://github.com/justmalhar)
+- 💻 [GitHub](https://github.com/justmalhar)  
 
 ---
-
-## ⚠️ Notes
-
-- Ensure your HuggingFace account has access to the model before logging in.
-- If you encounter `Model.__init__() missing required argument: 'config'`, verify model loading code inside `generator.py`.
-
----
--For a deployable version of this project, see (DEPLOYMENT.md).
-
-## 🧬 License
-
-MIT License (for the notebook). Model license terms apply as per [HuggingFace model card](https://huggingface.co/sesame/csm-1b).
