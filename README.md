@@ -60,7 +60,7 @@ A lightweight deployment is available here:
 - `app.py`: Gradio application script
 - `requirements.txt`: Dependencies for deployment
 
-### ✅ Deployment Features
+### Deployment Features
 - Identical functionality to the Colab notebook
 - No installation needed – runs directly in the browser
 - Mobile-friendly UI, CPU-compatible for wider accessibility
