@@ -18,6 +18,11 @@ This repository features a simple setup to convert text into speech using **Sesa
 - ✅ Live Demo: [Hugging Face Space](https://huggingface.co/spaces/pallavi1428/seacsm)
 
 - ⚡ Colab Notebook: [Sesame_AI_CSM_Notebook.ipynb](https://colab.research.google.com/github/Justmalhar/csm-google-collab/blob/main/Sesame_AI_CSM_Notebook.ipynb)
+=======
+- 🔊 Input: Text  
+- 🎙️ Output: Realistic speech audio via pretrained TTS model  
+- 🤖 Model: [`sesame/csm-1b`](https://www.google.com/search?q=site%3Ahuggingface.co+sesame%2Fcsm-1b)
+- Demo link: https://huggingface.co/spaces/pallavi1428/seacsm
 
 ---
 
@@ -80,6 +85,7 @@ A lightweight deployment is available here:
 - **Model**: [Sesame’s terms](https://huggingface.co/sesame/csm-1b)  
 
 ---
+-For a deployable version of this project, see (DEPLOYMENT.md).
 
 ## 🧑‍💻 Author
 - 👤 Malhar Ujawane
